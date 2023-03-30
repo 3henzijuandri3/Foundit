@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./css/style.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800&family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <title> Detail Barang Hilang </title>
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header class="w-full py-2 fixed bg-white z-10">
+            <div class="container">
+                <div class="flex w-full">
+                    
+                    <!-- Icon Panah -->
+                    <div class="w-fit">
+                        <a href="#">
+                            <svg width="25" height="20" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.5882 9.12331H4.81784L11.7076 2.36986C12.2583 1.83014 12.2583 0.944437 11.7076 0.404714C11.577 0.276421 11.4219 0.174638 11.2511 0.105192C11.0803 0.0357459 10.8972 0 10.7123 0C10.5274 0 10.3443 0.0357459 10.1735 0.105192C10.0027 0.174638 9.84756 0.276421 9.71695 0.404714L0.412886 9.52464C0.282003 9.65267 0.178165 9.80475 0.107317 9.97216C0.0364682 10.1396 0 10.319 0 10.5003C0 10.6815 0.0364682 10.861 0.107317 11.0284C0.178165 11.1958 0.282003 11.3479 0.412886 11.4759L9.71695 20.5959C9.84766 20.724 10.0028 20.8256 10.1736 20.895C10.3444 20.9643 10.5274 21 10.7123 21C10.8972 21 11.0802 20.9643 11.251 20.895C11.4218 20.8256 11.5769 20.724 11.7076 20.5959C11.8384 20.4677 11.942 20.3156 12.0128 20.1482C12.0835 19.9808 12.1199 19.8014 12.1199 19.6202C12.1199 19.439 12.0835 19.2596 12.0128 19.0922C11.942 18.9248 11.8384 18.7727 11.7076 18.6446L4.81784 11.8911H20.5882C21.3647 11.8911 22 11.2684 22 10.5072C22 9.74607 21.3647 9.12331 20.5882 9.12331Z" fill="#17282F"/>
+                            </svg>                        
+                        </a>
+                    </div>
+
+                    <!-- Judul Halaman -->
+                    <div class="w-[95%]">
+                        <p class="text-lg text-center font-poppinspins font-semibold"> Barang Hilang </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+
+        <!-- Gambar Barang Section -->
+        <section class="pt-14">
+            <div class="container">
+                <div class="flex flex-wrap">
+
+                    <!-- Profile -->
+                    <div class="flex justify-between w-full mb-3">
+
+                        <!-- User Profile -->
+                        <div class="flex">
+                            <!-- Icon Profile -->
+                            <div class="w-8 h-8 mr-3 rounded-full overflow-hidden">
+                                <img class="w-full h-full" src="../src/img/tim.png" alt="Profile">
+                            </div>
+
+                            <!-- Nama Profile -->
+                            <div class="flex items-center">
+                                <p class="text-sm font-poppins">Reza Fakhreza</p>
+                            </div>
+                        </div>
+
+                        <!-- Message Icon -->
+                        <span class="msg-bubble transition-all ease-in-out duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <!-- Bagian Gambar -->
+                    <div class="w-full h-[350px] rounded-t-[20px] overflow-hidden relative">
+                        
+                        <!-- Image Barang -->
+                        <img class="w-full h-full" src="../src/img/dompetHitam.png" alt="Gambar Barang">
+
+                        <!-- Informasi Barang -->
+                        <div class="flex justify-between items-center w-full rounded-t-[20px] bg-[#8D9EFF] absolute bottom-0">
+
+                            <!-- Nama Barang & Reward -->
+                            <div class="pl-4 py-[6px]">
+                                <p class="mb-1 text-lg text-white font-montserratAlt font-bold"> Dompet Cokelat </p>
+
+                                <div class="flex items-center w-fit text-white">
+                                    <span class="mr-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                                        </svg>  
+                                    </span>
+
+                                    <p class="text-xs font-poppins font-light"> Berhadiah </p>
+                                </div>
+
+                            </div>
+
+                            <p class="pr-2 text-xs text-white font-poppins font-light"> 28.12.2023, 11:47 PM </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+        </section>
+        <!-- Gambar Barang Section End -->
+
+
+        <!-- Deskripsi Barang Section -->
+        <section class="mt-4">
+            <div class="container">
+                <div class="flex flex-wrap">
+
+                    <!-- Deskripsi Barang Hilang -->
+                    <div class="w-full">
+                        <h1 class="mb-1 text-lg font-montserratAlt font-semibold"> Deskripsi Barang </h1>
+
+                        <p class="text-sm text-[#1D2A30] font-poppins font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Deskripsi Barang Section End -->
+
+
+        <!-- Garis Pembatas -->
+        <div class="w-full my-6 container">
+            <span class="w-full h-[1.5px] bg-[#8D9EFF] block"></span>
+        </div>
+
+
+        <!-- Kronologi Kehilangan Section -->
+        <section id="kronologi" class="">
+            <div class="container">
+                <div class="flex flex-wrap">
+
+                    <!-- Kronologi Barang Hilang -->
+                    <div class="w-full mb-5">
+                        <h1 class="mb-1 text-lg font-montserratAlt font-semibold"> Kronologi Kehilangan </h1>
+
+                        <p class="text-sm text-[#1D2A30] font-poppins font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Kronologi Kehilangan Section End-->
+        
+
+        <!-- Chat Owner -->
+        <div class="chat-user flex items-center justify-center w-[90%] py-3 bg-[#B9E0FF] rounded-xl fixed -bottom-28 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all ease-in-out duration-300">
+
+            <span class="mr-3">
+                <svg class="w-8 h-8 text-[#4870C0]"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                  </svg>
+                                       
+            </span>
+    
+            <h5 class="text-lg font-montserratAlt font-bold">Chat Owner</h5>
+        </div>
+        <!-- Chat Owner -->
+        
+
+        <script>
+            const msg_bubble = document.querySelector(".msg-bubble")
+            const chat_user = document.querySelector(".chat-user")
+            const section_kehilangan = document.getElementById("kronologi")
+
+            msg_bubble.addEventListener("click", () => {
+                section_kehilangan.classList.toggle("mb-20")
+
+                msg_bubble.classList.toggle("text-[#4870C0]")
+
+                chat_user.classList.toggle("-bottom-28")
+                chat_user.classList.toggle("-bottom-4")
+            })
+            
+        </script>
+
+    </body>
+
+</html>
