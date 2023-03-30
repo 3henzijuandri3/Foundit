@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Search Barang Temu</title>
+</head>
+<body>
+    
+    <!-- Section Atas (Header) -->
+    <section class="fixed w-full pt-4 z-10 bg-white">
+        <div class="flex flex-wrap">
+            
+            <!-- Icon back, search bar, filter menu -->
+            <div class="container">
+                <header class="flex justify-between items-center w-full py-2">
+                    <!-- Icon Back -->
+                    <div class="w-fit">
+                        <a href="#">
+                            <svg width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8295 26.4657L0.405529 14.4974C0.258064 14.3549 0.153855 14.2005 0.0929028 14.0343C0.0309673 13.8681 0 13.69 0 13.5C0 13.31 0.0309673 13.1319 0.0929028 12.9657C0.153855 12.7995 0.258064 12.6451 0.405529 12.5026L12.8295 0.498681C13.1736 0.166227 13.6037 0 14.1198 0C14.6359 0 15.0783 0.1781 15.447 0.534301C15.8157 0.890501 16 1.30607 16 1.781C16 2.25594 15.8157 2.6715 15.447 3.0277L4.60829 13.5L15.447 23.9723C15.7911 24.3047 15.9631 24.7141 15.9631 25.2005C15.9631 25.6878 15.7788 26.1095 15.4101 26.4657C15.0415 26.8219 14.6114 27 14.1198 27C13.6283 27 13.1982 26.8219 12.8295 26.4657Z" fill="black"/>
+                            </svg>                                  
+                        </a>
+                    </div>
+    
+                    <!-- Search Bar -->
+                    <form class="w-[80%] relative">
+                            
+                        <input id="search" name="search" class="w-full px-5 py-3 text-sm placeholder-black font-poppins font-extralight bg-white rounded-lg shadow-3xl" type="text" placeholder="All item">
+
+                        <label for="search" class="p-1 bg-[#8D9EFF] rounded-lg absolute top-1/2 right-3 -translate-y-1/2">
+                            <svg class="w-5 h-5 text-white"  width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg>
+                        </label>
+                    </form>
+    
+                    <!-- Filter Menu -->
+                    <div class="w-fit">
+                        <a href="#">
+                            <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.99984 4.33333C8.55781 4.33333 8.13389 4.50892 7.82133 4.82148C7.50877 5.13404 7.33317 5.55797 7.33317 5.99999C7.33317 6.44202 7.50877 6.86594 7.82133 7.1785C8.13389 7.49107 8.55781 7.66666 8.99984 7.66666C9.44186 7.66666 9.86579 7.49107 10.1783 7.1785C10.4909 6.86594 10.6665 6.44202 10.6665 5.99999C10.6665 5.55797 10.4909 5.13404 10.1783 4.82148C9.86579 4.50892 9.44186 4.33333 8.99984 4.33333ZM4.28317 4.33333C4.62751 3.35744 5.26607 2.51238 6.11084 1.91464C6.9556 1.3169 7.96498 0.995911 8.99984 0.995911C10.0347 0.995911 11.0441 1.3169 11.8888 1.91464C12.7336 2.51238 13.3722 3.35744 13.7165 4.33333H25.6665C26.1085 4.33333 26.5325 4.50892 26.845 4.82148C27.1576 5.13404 27.3332 5.55797 27.3332 5.99999C27.3332 6.44202 27.1576 6.86594 26.845 7.1785C26.5325 7.49107 26.1085 7.66666 25.6665 7.66666H13.7165C13.3722 8.64255 12.7336 9.48761 11.8888 10.0853C11.0441 10.6831 10.0347 11.0041 8.99984 11.0041C7.96498 11.0041 6.9556 10.6831 6.11084 10.0853C5.26607 9.48761 4.62751 8.64255 4.28317 7.66666H2.33317C1.89114 7.66666 1.46722 7.49107 1.15466 7.1785C0.842099 6.86594 0.666504 6.44202 0.666504 5.99999C0.666504 5.55797 0.842099 5.13404 1.15466 4.82148C1.46722 4.50892 1.89114 4.33333 2.33317 4.33333H4.28317ZM18.9998 14.3333C18.5578 14.3333 18.1339 14.5089 17.8213 14.8215C17.5088 15.134 17.3332 15.558 17.3332 16C17.3332 16.442 17.5088 16.8659 17.8213 17.1785C18.1339 17.4911 18.5578 17.6667 18.9998 17.6667C19.4419 17.6667 19.8658 17.4911 20.1783 17.1785C20.4909 16.8659 20.6665 16.442 20.6665 16C20.6665 15.558 20.4909 15.134 20.1783 14.8215C19.8658 14.5089 19.4419 14.3333 18.9998 14.3333ZM14.2832 14.3333C14.6275 13.3574 15.2661 12.5124 16.1108 11.9146C16.9556 11.3169 17.965 10.9959 18.9998 10.9959C20.0347 10.9959 21.0441 11.3169 21.8888 11.9146C22.7336 12.5124 23.3722 13.3574 23.7165 14.3333H25.6665C26.1085 14.3333 26.5325 14.5089 26.845 14.8215C27.1576 15.134 27.3332 15.558 27.3332 16C27.3332 16.442 27.1576 16.8659 26.845 17.1785C26.5325 17.4911 26.1085 17.6667 25.6665 17.6667H23.7165C23.3722 18.6425 22.7336 19.4876 21.8888 20.0853C21.0441 20.6831 20.0347 21.0041 18.9998 21.0041C17.965 21.0041 16.9556 20.6831 16.1108 20.0853C15.2661 19.4876 14.6275 18.6425 14.2832 17.6667H2.33317C1.89114 17.6667 1.46722 17.4911 1.15466 17.1785C0.842099 16.8659 0.666504 16.442 0.666504 16C0.666504 15.558 0.842099 15.134 1.15466 14.8215C1.46722 14.5089 1.89114 14.3333 2.33317 14.3333H14.2832ZM8.99984 24.3333C8.55781 24.3333 8.13389 24.5089 7.82133 24.8215C7.50877 25.134 7.33317 25.558 7.33317 26C7.33317 26.442 7.50877 26.8659 7.82133 27.1785C8.13389 27.4911 8.55781 27.6667 8.99984 27.6667C9.44186 27.6667 9.86579 27.4911 10.1783 27.1785C10.4909 26.8659 10.6665 26.442 10.6665 26C10.6665 25.558 10.4909 25.134 10.1783 24.8215C9.86579 24.5089 9.44186 24.3333 8.99984 24.3333ZM4.28317 24.3333C4.62751 23.3574 5.26607 22.5124 6.11084 21.9146C6.9556 21.3169 7.96498 20.9959 8.99984 20.9959C10.0347 20.9959 11.0441 21.3169 11.8888 21.9146C12.7336 22.5124 13.3722 23.3574 13.7165 24.3333H25.6665C26.1085 24.3333 26.5325 24.5089 26.845 24.8215C27.1576 25.134 27.3332 25.558 27.3332 26C27.3332 26.442 27.1576 26.8659 26.845 27.1785C26.5325 27.4911 26.1085 27.6667 25.6665 27.6667H13.7165C13.3722 28.6425 12.7336 29.4876 11.8888 30.0853C11.0441 30.6831 10.0347 31.0041 8.99984 31.0041C7.96498 31.0041 6.9556 30.6831 6.11084 30.0853C5.26607 29.4876 4.62751 28.6425 4.28317 27.6667H2.33317C1.89114 27.6667 1.46722 27.4911 1.15466 27.1785C0.842099 26.8659 0.666504 26.442 0.666504 26C0.666504 25.558 0.842099 25.134 1.15466 24.8215C1.46722 24.5089 1.89114 24.3333 2.33317 24.3333H4.28317Z" fill="#8D72E1"/>
+                                </svg>                                
+                        </a>
+                    </div>
+                </header>
+            </div>
+
+            <!-- Judul Halaman -->
+            <div class="flex justify-around w-full pt-5">
+                <!-- Barang Temuan -->
+                <div class="w-1/2">
+                    <a href="">
+                        <h2 class="py-1 text-base text-center text-[#8D72E1] font-montserrat font-semibold tracking-wide">Barang Temuan</h2>
+                    </a>
+
+                    <!-- Garis Bawah -->
+                    <div class="w-full">
+                        <span class="w-full h-[2px] bg-[#8D72E1] block"></span>
+                    </div>
+                </div>
+
+                <!-- Barang Hilang -->
+                <div class="w-1/2">
+                    <a href="">
+                        <h2 class="py-1 text-base text-center text-[#BDC1C2] font-montserrat font-semibold tracking-wide">Barang Hilang</h2>
+                    </a>
+
+                    <!-- Garis Bawah -->
+                    <div class="w-full">
+                        <span class="w-full h-[2px] bg-[#BDC1C2] block"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Section Atas (Header) End -->
+
+    <!-- Barang Hilang Section -->
+    <section class="pt-36 pb-8 relative">
+        <div class="container">
+            <div class="flex flex-wrap ">
+                <div class="w-full grid grid-col-2 gap-4">
+                    <!-- Barang Hilang Row 1 -->
+                    <div class="flex justify-between">
+                        <!-- Card 1 -->
+                        <div class="f w-[45%] bg-white rounded-xl shadow-barang overflow-hidden">
+                            <!-- Image Container -->
+                            <div class="w-full h-[130px] relative">  
+                                <img class="w-full h-full" src="../src/img/dompetHitam.png" alt="Gambar Barang">
+                            </div>
+
+                            <!-- Deskripsi Kehilangan -->
+                            <div class="w-full px-2 py-3">
+
+                                <!-- Nama Barang -->
+                                <h1 class="mb-2 text-base font-poppins font-semibold"> Dompet Cokelat </h1>
+
+                                <!-- Location Barang -->
+                                <div class="flex items-center w-full mb-[5px]">
+                                    <span class="mr-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                    </span> 
+
+                                    <p class="text-xs font-poppins font-normal"> Bank Mandiri Telkom </p>
+                                </div>
+
+                                <!-- Tanggal Barang -->
+                                <div class="flex items-center w-full">
+                                    <span class="mr-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                                        </svg>  
+                                    </span>
+    
+                                    <p class="text-xs font-poppins font-normal"> 29 / 03 / 2023 </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flex-shrink-0 w-[45%] bg-white rounded-xl shadow-barang overflow-hidden">
+                            <!-- Image Container -->
+                            <div class="w-full h-[130px] relative">  
+                                <img class="w-full h-full" src="../src/img/dompetHitam.png" alt="Gambar Barang">
+                            </div>
+
+                            <!-- Deskripsi Kehilangan -->
+                            <div class="w-full px-2 py-3">
+
+                                <!-- Nama Barang -->
+                                <h1 class="mb-2 text-base font-poppins font-semibold"> Dompet Cokelat </h1>
+
+                                <!-- Location Barang -->
+                                <div class="flex items-center w-full mb-[5px]">
+                                    <span class="mr-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                    </span> 
+
+                                    <p class="text-xs font-poppins font-normal"> Bank Mandiri Telkom </p>
+                                </div>
+
+                                <!-- Tanggal Barang -->
+                                <div class="flex items-center w-full">
+                                    <span class="mr-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                                        </svg>  
+                                    </span>
+    
+                                    <p class="text-xs font-poppins font-normal"> 29 / 03 / 2023 </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Barang Hilang Row 2 -->
+                    <div class="flex justify-between">
+                        <!-- Card 3 -->
+                        <div class="f w-[45%] bg-white rounded-xl shadow-barang overflow-hidden">
+                            <!-- Image Container -->
+                            <div class="w-full h-[130px] relative">  
+                                <img class="w-full h-full" src="../src/img/dompetHitam.png" alt="Gambar Barang">
+                            </div>
+
+                            <!-- Deskripsi Kehilangan -->
+                            <div class="w-full px-2 py-3">
+
+                                <!-- Nama Barang -->
+                                <h1 class="mb-2 text-base font-poppins font-semibold"> Dompet Cokelat </h1>
+
+                                <!-- Location Barang -->
+                                <div class="flex items-center w-full mb-[5px]">
+                                    <span class="mr-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                    </span> 
+
+                                    <p class="text-xs font-poppins font-normal"> Bank Mandiri Telkom </p>
+                                </div>
+
+                                <!-- Tanggal Barang -->
+                                <div class="flex items-center w-full">
+                                    <span class="mr-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                                        </svg>  
+                                    </span>
+    
+                                    <p class="text-xs font-poppins font-normal"> 29 / 03 / 2023 </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="flex-shrink-0 w-[45%] bg-white rounded-xl shadow-barang overflow-hidden">
+                            <!-- Image Container -->
+                            <div class="w-full h-[130px] relative">  
+                                <img class="w-full h-full" src="../src/img/dompetHitam.png" alt="Gambar Barang">
+                            </div>
+
+                            <!-- Deskripsi Kehilangan -->
+                            <div class="w-full px-2 py-3">
+
+                                <!-- Nama Barang -->
+                                <h1 class="mb-2 text-base font-poppins font-semibold"> Dompet Cokelat </h1>
+
+                                <!-- Location Barang -->
+                                <div class="flex items-center w-full mb-[5px]">
+                                    <span class="mr-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                    </span> 
+
+                                    <p class="text-xs font-poppins font-normal"> Bank Mandiri Telkom </p>
+                                </div>
+
+                                <!-- Tanggal Barang -->
+                                <div class="flex items-center w-full">
+                                    <span class="mr-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                                        </svg>  
+                                    </span>
+    
+                                    <p class="text-xs font-poppins font-normal"> 29 / 03 / 2023 </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Barang Hilang Row 3 -->
+                    <div class="flex justify-between">
+                        <!-- Card 5 -->
+                        <div class="f w-[45%] bg-white rounded-xl shadow-barang overflow-hidden">
+                            <!-- Image Container -->
+                            <div class="w-full h-[130px] relative">  
+                                <img class="w-full h-full" src="../src/img/dompetHitam.png" alt="Gambar Barang">
+                            </div>
+
+                            <!-- Deskripsi Kehilangan -->
+                            <div class="w-full px-2 py-3">
+
+                                <!-- Nama Barang -->
+                                <h1 class="mb-2 text-base font-poppins font-semibold"> Dompet Cokelat </h1>
+
+                                <!-- Location Barang -->
+                                <div class="flex items-center w-full mb-[5px]">
+                                    <span class="mr-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                    </span> 
+
+                                    <p class="text-xs font-poppins font-normal"> Bank Mandiri Telkom </p>
+                                </div>
+
+                                <!-- Tanggal Barang -->
+                                <div class="flex items-center w-full">
+                                    <span class="mr-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                                        </svg>  
+                                    </span>
+    
+                                    <p class="text-xs font-poppins font-normal"> 29 / 03 / 2023 </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="flex-shrink-0 w-[45%] bg-white rounded-xl shadow-barang overflow-hidden">
+                            <!-- Image Container -->
+                            <div class="w-full h-[130px] relative">  
+                                <img class="w-full h-full" src="../src/img/dompetHitam.png" alt="Gambar Barang">
+                            </div>
+
+                            <!-- Deskripsi Kehilangan -->
+                            <div class="w-full px-2 py-3">
+
+                                <!-- Nama Barang -->
+                                <h1 class="mb-2 text-base font-poppins font-semibold"> Dompet Cokelat </h1>
+
+                                <!-- Location Barang -->
+                                <div class="flex items-center w-full mb-[5px]">
+                                    <span class="mr-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                    </span> 
+
+                                    <p class="text-xs font-poppins font-normal"> Bank Mandiri Telkom </p>
+                                </div>
+
+                                <!-- Tanggal Barang -->
+                                <div class="flex items-center w-full">
+                                    <span class="mr-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                                        </svg>  
+                                    </span>
+    
+                                    <p class="text-xs font-poppins font-normal"> 29 / 03 / 2023 </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Barang Hilang Row 4 -->
+                    <div class="flex justify-between">
+                        <!-- Card 7 -->
+                        <div class="f w-[45%] bg-white rounded-xl shadow-barang overflow-hidden">
+                            <!-- Image Container -->
+                            <div class="w-full h-[130px] relative">  
+                                <img class="w-full h-full" src="../src/img/dompetHitam.png" alt="Gambar Barang">
+                            </div>
+
+                            <!-- Deskripsi Kehilangan -->
+                            <div class="w-full px-2 py-3">
+
+                                <!-- Nama Barang -->
+                                <h1 class="mb-2 text-base font-poppins font-semibold"> Dompet Cokelat </h1>
+
+                                <!-- Location Barang -->
+                                <div class="flex items-center w-full mb-[5px]">
+                                    <span class="mr-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                    </span> 
+
+                                    <p class="text-xs font-poppins font-normal"> Bank Mandiri Telkom </p>
+                                </div>
+
+                                <!-- Tanggal Barang -->
+                                <div class="flex items-center w-full">
+                                    <span class="mr-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                                        </svg>  
+                                    </span>
+    
+                                    <p class="text-xs font-poppins font-normal"> 29 / 03 / 2023 </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="flex-shrink-0 w-[45%] bg-white rounded-xl shadow-barang overflow-hidden">
+                            <!-- Image Container -->
+                            <div class="w-full h-[130px] relative">  
+                                <img class="w-full h-full" src="../src/img/dompetHitam.png" alt="Gambar Barang">
+                            </div>
+
+                            <!-- Deskripsi Kehilangan -->
+                            <div class="w-full px-2 py-3">
+
+                                <!-- Nama Barang -->
+                                <h1 class="mb-2 text-base font-poppins font-semibold"> Dompet Cokelat </h1>
+
+                                <!-- Location Barang -->
+                                <div class="flex items-center w-full mb-[5px]">
+                                    <span class="mr-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                    </span> 
+
+                                    <p class="text-xs font-poppins font-normal"> Bank Mandiri Telkom </p>
+                                </div>
+
+                                <!-- Tanggal Barang -->
+                                <div class="flex items-center w-full">
+                                    <span class="mr-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[15px] h-[15px]">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                                        </svg>  
+                                    </span>
+    
+                                    <p class="text-xs font-poppins font-normal"> 29 / 03 / 2023 </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Barang Hilang Section End -->
+
+    <!-- Bottom Navigation -->
+    <section class="w-[88%] py-[14px] bg-[#8D72E1] rounded-2xl fixed bottom-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
+        <div  class="w-full flex justify-between mx-auto relative">
+
+            <!-- Navigasi Kiri -->
+            <div class="flex w-[45%] justify-evenly">
+
+                <!-- Home -->
+                <button title="Home">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                </button>
+    
+                <!-- Produk -->
+                <button title="Product">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Tombol Tengah -->
+            <div class="flex justify-center items-center p-2 bg-[#B9E0FF] rounded-2xl shadow-3xl absolute -top-3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <button>
+                    <svg class="h-9 w-9 text-white"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>                          
+                </button>
+            </div>
+
+            <!-- Navigasi Kanan -->
+            <div class="flex w-[45%] justify-evenly">
+
+                <!-- Pelatihan -->
+                <button title="Pelatihan">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                    </svg>
+                </button>
+    
+                <!-- About Us -->
+                <button title="About Us">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
