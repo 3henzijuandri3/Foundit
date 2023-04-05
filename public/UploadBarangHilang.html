@@ -1,143 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="./css/style.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800&family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800&family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <title>Laporan Barang Hilang</title>
-</head>
-<body class="bg-gray-200">
-    
-    <!-- Section Atas (Mobile) -->
-    <section class="w-full fixed z-10 bg-white ">
-        <div class="container">
-            <!-- Header -->
-            <div class="w-full py-2 flex items-center">
+        <title>Laporan Barang</title>
+    </head>
 
-                <!-- Icon Back -->
-                <div class="w-fit">
-                    <a href="#">
-                        <svg width="25" height="20" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.5882 9.12331H4.81784L11.7076 2.36986C12.2583 1.83014 12.2583 0.944437 11.7076 0.404714C11.577 0.276421 11.4219 0.174638 11.2511 0.105192C11.0803 0.0357459 10.8972 0 10.7123 0C10.5274 0 10.3443 0.0357459 10.1735 0.105192C10.0027 0.174638 9.84756 0.276421 9.71695 0.404714L0.412886 9.52464C0.282003 9.65267 0.178165 9.80475 0.107317 9.97216C0.0364682 10.1396 0 10.319 0 10.5003C0 10.6815 0.0364682 10.861 0.107317 11.0284C0.178165 11.1958 0.282003 11.3479 0.412886 11.4759L9.71695 20.5959C9.84766 20.724 10.0028 20.8256 10.1736 20.895C10.3444 20.9643 10.5274 21 10.7123 21C10.8972 21 11.0802 20.9643 11.251 20.895C11.4218 20.8256 11.5769 20.724 11.7076 20.5959C11.8384 20.4677 11.942 20.3156 12.0128 20.1482C12.0835 19.9808 12.1199 19.8014 12.1199 19.6202C12.1199 19.439 12.0835 19.2596 12.0128 19.0922C11.942 18.9248 11.8384 18.7727 11.7076 18.6446L4.81784 11.8911H20.5882C21.3647 11.8911 22 11.2684 22 10.5072C22 9.74607 21.3647 9.12331 20.5882 9.12331Z" fill="#17282F"/>
-                        </svg>  
-                    </a>
+    <body class="bg-gray-200">
+
+        <!-- Desktop Navigation Bar -->
+        <header class="w-full fixed bg-white shadow-kategori hidden lg:block z-10">
+            <div class="container flex justify-between w-full ">
+
+                <!-- Logo (Kiri) -->
+                <div class="w-[8%] ">
+                    <img class="w-full" src="../src/img/logoLain.png" alt="Logo Foundit">
                 </div>
 
-                <!-- Judul Halaman -->
-                <div class="w-[95%]">
-                    <h1 class="text-lg text-center font-poppins font-semibold">Pelaporan Barang</h1>
-                </div>
-                <!-- Judul Halaman End-->
+                <!-- Navigasi Halaman (Kanan) -->
+                <div class="flex justify-around items-center w-[75%] ">
+                    <a class="text-sm font-montserrat font-semibold xl:text-base" href="#"> About Us </a>
 
-            </div>
+                    <a class="text-sm font-montserrat font-semibold xl:text-base" href="#"> Laporan </a>
 
-            <!-- Halaman Laporan -->
-            <div class="w-full flex pt-8 justify-center gap-2">
-                <!-- Barang Hilang -->
-                <div class="w-1/2">
-                    <h1 class="y-1 text-base text-center font-montserrat font-semibold tracking-wide">Barang Hilang</h1>
+                    <a class="text-sm font-montserrat font-semibold xl:text-base" href="#"> Chatting </a>
 
-                    <!-- Garis Bawah -->
-                    <div class="w-full py-1">
-                        <span class="w-full h-[5px] bg-[#8D9EFF] rounded-lg block"></span>
-                    </div>
-                </div>
+                    <a class="text-sm font-montserrat font-semibold xl:text-base" href="#"> Settings </a>
 
-                <!-- Barang Temuan -->
-                <div class="w-1/2">
-                    <h1 class="y-1 text-base text-center font-montserrat font-semibold tracking-wide">Barang Temuan</h1>
+                    <form class="w-[35%] relative xl:w-[28%]">
+                        <input id="search" name="search" class="w-full pl-12 py-2 text-xs font-poppins font-medium placeholder-[#244CA5] bg-white border border-[#244CA5] rounded-lg xl:text-sm" type="text" placeholder="Cari Barangmu Yang Hilang !">
 
-                    <!-- Garis Bawah -->
-                    <div class="w-full py-1">
-                        <span class="w-full h-[5px] bg-[#BDC1C2] rounded-lg block"></span>
-                    </div>
-                </div>
-            </div>
-
-            
-        </div>
-    </section>
-    <!-- Section Atas (Mobile) End-->
-
-    <!-- Masukan Data Barang Hilang -->
-    <section class="py-8 bg-white rounded-t-3xl">
-        <div class="container mt-20">
-            <h1 class="mb-4 text-xl font-montserrat font-bold">Masukkan Data</h1>
-
-            <form>
-                <!-- Nama Barang -->
-                <div class="w-full py-2">
-                    <label class="text-sm text-[#244CA5] font-montserrat font-medium" for="nama-barang"> Nama Barang </label>
-
-                    <input class="w-full p-3 border border-[#88C6F8] rounded-xl shadow-md" type="text" id="nama-barang">
-                </div>
-                
-                <!-- Deskripsi Barang  -->
-                <div class="w-full py-2">
-                    <label class="text-sm text-[#244CA5] font-montserrat font-medium" for="desc-barang"> Deskripsi Barang </label>
-
-                    <textarea class="w-full p-3 border border-[#88C6F8] rounded-xl shadow-md" type="text" id="nama-barang" rows="5"></textarea>
-                </div>
-
-                <!-- Kronologi Kehilangan -->
-                <div class="w-full py-2">
-                    <label class="text-sm text-[#244CA5] font-montserrat font-medium" for="nama-barang"> Kronologi Kehilangan </label>
-
-                    <textarea class="w-full p-3 border border-[#88C6F8] rounded-xl shadow-md" type="text" id="nama-barang" rows="5"></textarea>
-                    <input >
-                </div>
-
-                <!-- Upload Foto -->
-                <div class="flex w-full">
-                    <!-- Input Image -->
-                    <div class="w-1/3">
-                        <label class="mb-1 text-sm text-[#244CA5] font-montserrat font-medium block">Upload Foto Barang</label>
-                        <label for="upload-foto" class=" flex flex-col items-center justify-center w-[90%] h-32 border border-gray-100 rounded-xl shadow-3xl cursor-pointer bg-gray-50 ">
-                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.375 14.3332C5.375 15.3186 6.18125 16.1248 7.16667 16.1248C8.15208 16.1248 8.95833 15.3186 8.95833 14.3332V10.7498H12.5417C13.5271 10.7498 14.3333 9.94359 14.3333 8.95817C14.3333 7.97275 13.5271 7.1665 12.5417 7.1665H8.95833V3.58317C8.95833 2.59775 8.15208 1.7915 7.16667 1.7915C6.18125 1.7915 5.375 2.59775 5.375 3.58317V7.1665H1.79167C0.80625 7.1665 0 7.97275 0 8.95817C0 9.94359 0.80625 10.7498 1.79167 10.7498H5.375V14.3332Z" fill="#6C4AB6"/>
-                                    <path d="M23.2917 30.4585C26.2603 30.4585 28.6667 28.052 28.6667 25.0835C28.6667 22.115 26.2603 19.7085 23.2917 19.7085C20.3232 19.7085 17.9167 22.115 17.9167 25.0835C17.9167 28.052 20.3232 30.4585 23.2917 30.4585Z" fill="#6C4AB6"/>
-                                    <path d="M37.625 10.7498H31.9454L29.7237 8.33109C29.3899 7.9645 28.9832 7.67159 28.5297 7.47106C28.0762 7.27054 27.5858 7.16681 27.09 7.1665H15.6233C15.9279 7.704 16.125 8.29525 16.125 8.95817C16.125 10.929 14.5125 12.5415 12.5417 12.5415H10.75V14.3332C10.75 16.304 9.1375 17.9165 7.16667 17.9165C6.50375 17.9165 5.9125 17.7194 5.375 17.4148V35.8332C5.375 37.804 6.9875 39.4165 8.95833 39.4165H37.625C39.5958 39.4165 41.2083 37.804 41.2083 35.8332V14.3332C41.2083 12.3623 39.5958 10.7498 37.625 10.7498ZM23.2917 34.0415C18.3467 34.0415 14.3333 30.0282 14.3333 25.0832C14.3333 20.1382 18.3467 16.1248 23.2917 16.1248C28.2367 16.1248 32.25 20.1382 32.25 25.0832C32.25 30.0282 28.2367 34.0415 23.2917 34.0415Z" fill="#6C4AB6"/>
-                                </svg>                                    
-                            </div>
-                            <input id="upload-foto" type="file" class="hidden" />
+                        <label for="search" class="absolute top-1/2 left-2 -translate-y-1/2">
+                            <svg class="w-1 h-1 text-[#244CA5] md:w-7 md:h-7" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg>
                         </label>
-                    </div> 
+                    </form>
+                </div>
 
-                    <!-- Statement Reward -->
-                    <div class="w-2/3 flex flex-col justify-end">
-                        <!-- Statement -->
-                        <p class="text-xs text-[#244CA5] font-montserrat font-medium">Apakah ingin memberikan reward bagi yang menemukan?</p>
+                <!-- Profile and Notifications -->
+                <div class="flex items-center w-[15%]">
 
-                        <div class="mt-2 flex items-center text-xs">
-                            <div class="px-1 mx-1">
-                                <input type="checkbox" id="reward-yes">
-                                <label for="reward-yes" class="text-[#244CA5] font-montserrat">Yup, Dapet Reward!</label>
-                            </div>
+                    <!-- Notifications -->
+                    <span class="mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[#244CA5]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
+                            </svg>
+                    </span>
 
-                            <div class="px-1">
-                                <input type="checkbox" id="reward-no">
-                                <label for="reward-no" class="text-[#244CA5] font-montserrat">Maaf gak dapet :(</label>
-                            </div>
-                        </div>
+                    <!-- Profile User -->
+                    <div class="w-10 h-10 mr-3 rounded-full overflow-hidden">
+                        <img class="w-full h-full" src="../src/img/tim.png" alt="Profile Dummy">
                     </div>
+
+                    <!-- Nama User -->
+                    <p class="text-lg font-montserrat font-semibold"> Reza </p>
+
                 </div>
 
-                <!-- Tombol Upload -->
-                <div class="my-14 text-center bg-[#8D72E1] rounded-xl shadow-xl">
-                    <button class="py-3 font-montserrat font-semibold ">Unggah Laporan</button>
-                </div>
-            </form>
-        </div>
-    </section>
-    <!-- Masukan Data Barang Hilang End-->
+            </div>
+        </header>
 
-</body>
+        
+        <!-- Header Mobile -->
+        <header class="w-full fixed top-0 bg-white z-10 lg:hidden">
+            <div class="container">
+
+                <!-- Icon Panah, Search Bar & Filter -->
+                <div class="flex items-center w-full pt-4">
+
+                    <!-- Icon Panah -->
+                    <div class="w-fit">
+                        <a href="Home.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                                </svg>                                                                       
+                        </a>
+                    </div>
+
+                    <!-- Judul Halaman -->
+                    <h1 class="w-[90%] text-center text-lg font-poppins font-semibold"> Pelaporan Barang </h1>
+
+                </div>
+
+                <!-- Navigasi Barang Temuan & Barang Hilang -->
+                <div class="w-full pt-8 ">
+
+                    <!-- Judul Navigasi -->
+                    <div class="flex w-full mb-1">
+
+                        <!-- Judul Temuan -->
+                        <div class="nav-temu w-1/2 text-[#BDC1C2]">
+                            <h2 class="py-1 text-base text-center font-montserrat font-semibold tracking-wide">Barang Temuan</h2>
+                        </div>
+
+                        <div class="nav-hilang w-1/2 text-[#8D9EFF] pointer-events-none">
+                            <h2 class="py-1 text-base text-center font-montserrat font-semibold tracking-wide">Barang Hilang</h2>
+                        </div>
+
+                    </div>
+
+                    <!-- Span Garis Ungu -->
+                    <div class="w-full">
+                        <span class="slide-span w-1/2 h-[3px] bg-[#8D9EFF] rounded-2xl block translate-x-full transition-all ease-in-out duration-300"></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+
+        <!-- Upload Laporan Opening Section  -->
+        <section class="pt-36 hidden lg:block">
+            <div class="container">
+                <div class="w-full h-[45vh] mx-auto rounded-[40px] bg-no-repeat bg-left-bottom bg-cover relative" style="background-image: url(../src/img/bgAllitem.png);">
+
+                    <!-- All Item Opening -->
+                    <div class="flex flex-col justify-center items-center w-full h-full">
+                
+                        <!-- Tagline -->
+                        <p class="mb-5 text-5xl text-white font-jost font-semibold"> Kehilangan Atau Menemukan Barang ? </p>
+                        <p class="text-5xl text-white font-jost font-semibold"> Coba Buat Laporan Mu Di Sini ! </p>
+
+                    </div>
+
+                    <!-- Switch Laporan -->
+                    <div class="flex justify-center items-center w-[350px] h-[70px] px-3 bg-white rounded-3xl absolute -bottom-18 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">
+
+                        <!-- Hilang & Temu -->
+                        <div class="flex items-center w-full h-full text-center relative z-[1]">
+
+                            <!-- Hilang -->
+                            <div class="switch-hilang w-1/2 text-white relative z-[3] transition-all duration-75 ease-in pointer-events-none">
+                                <p class="text-base  font-montserratAlt font-bold"> Barang Hilang </p>
+                            </div>
+
+                            <!-- Temu -->
+                            <div class="switch-temu w-1/2 text-[#BDC1C2] relative z-[3] transition-all duration-75 ease-in">
+                                <p class="text-base font-montserratAlt font-bold"> Barang Temuan </p>
+                            </div>
+
+                            <!-- Switcher -->
+                            <div class="switcher w-[50%] h-[55px] bg-[#8D9EFF] text-center rounded-2xl absolute transition-all ease-in-out duration-300 z-[2]">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Upload Laporan Opening Section End -->
+
+
+        <!-- Form Barang Hilang & Ketemu (Mobile - Tablet) -->
+        <section id="form-hilang-temu" class="px-3 pt-40 transition-all ease-in-out duration-700 lg:hidden">
+            <div class="container pb-5 bg-white rounded-t-[35px]">
+
+                <!-- Judul Form -->
+                <h1 class="judul-hilang py-4 text-2xl font-montserrat font-bold sm:text-center sm:text-3xl">Data Barang Hilang</h1>
+                <h1 class="judul-temu py-4 text-2xl font-montserrat font-bold hidden sm:text-center sm:text-3xl">Data Barang Temuan</h1>
+
+                <!-- Form -->
+                <form class="w-full">
+                    <!-- Nama Barang -->
+                    <div class="w-full py-2">
+                        <label class="text-sm text-[#244CA5] font-montserrat font-medium sm:text-base" for="nama-barang"> Nama Barang </label>
+
+                        <input class="w-full p-3 border border-[#88C6F8] rounded-xl shadow-md sm:mt-3" type="text" id="nama-barang">
+                    </div>
+                    
+                    <!-- Deskripsi Barang  -->
+                    <div class="w-full py-2">
+                        <label class="text-sm text-[#244CA5] font-montserrat font-medium sm:text-base" for="desc-barang"> Deskripsi Barang </label>
+
+                        <textarea class="w-full p-3 border border-[#88C6F8] rounded-xl shadow-md sm:mt-3" type="text" id="desc-barang" rows="5"></textarea>
+                    </div>
+
+                    <!-- Kronologi -->
+                    <div class="w-full py-2">
+                        <label class="text-sm text-[#244CA5] font-montserrat font-medium sm:text-base" for="kronologi-barang"> Kronologi Kehilangan </label>
+
+                        <textarea class="w-full p-3 border border-[#88C6F8] rounded-xl shadow-md sm:mt-3" type="text" id="kronologi-barang" rows="5"></textarea>
+                    </div>
+
+                    <!-- Upload Foto -->
+                    <div class="w-full py-3">
+
+                        <label class="w-full mb-3 text-sm text-[#244CA5] font-montserrat font-medium sm:text-base block">Upload Foto Barang</label>
+                        
+                        <!-- Pembagian Kanan dan Kiri -->
+                        <div class="flex justify-between w-full sm:mt-3">
+                            
+                            <!-- Kiri -->
+                            <div class="w-[40%]">
+
+                                <!-- Image Show -->
+                                <div class="w-full mb-2 h-[120px] bg-white rounded-lg shadow-input-gambar relative">
+
+                                    <label id="img-placeholder" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" for="upload-foto">
+                                        <svg class="w-12 h-12 text-[#6C4AB6]"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="13" r="3" />  <path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h2m9 7v7a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />  <line x1="15" y1="6" x2="21" y2="6" />  <line x1="18" y1="3" x2="18" y2="9" /></svg>
+                                    </label>
+
+                                    <img id="gambar-input" class="w-full h-full rounded-lg">
+                                </div>
+
+                                <input class="w-full font-montserrat font-medium" type="file" name="upload-foto" id="upload-foto"  onchange="loadFile(event)" required> 
+
+                            </div>
+
+    
+                            <!-- Rewards / Location -->
+                            <div class="w-[55%]">
+
+                                <!-- Reward -->
+                                <div class="rewards-hilang w-full">
+                        
+                                    <p class="mb-3 text-sm text-[#244CA5] font-montserrat font-medium sm:text-base"> Apakah kamu ingin memberi rewards ? </p>
+            
+                                    <div class="flex flex-col gap-4 w-full sm:mt-3">
+                                        <div class="flex items-center gap-3 w-[80%] px-2 py-[5px] border border-[#244CA5] rounded-lg">
+                                            <input class="" type="radio" id="radio-ya" name="yes-no" value="ya">
+                                            <label id="ya-label" class="text-xs font-montserrat font-medium rounded-lg sm:text-sm" for="radio-ya">Yup, Dapet Nih !</label>
+                                        </div>
+                
+                                        <div class="flex items-center gap-3 w-[80%] px-2 py-[5px] border border-[#244CA5] rounded-lg">
+                                            <input class="" type="radio" id="radio-tidak" name="yes-no" value="tidak">
+                                            <label id="tidak-label" class="text-xs font-montserrat font-medium sm:text-sm" for="radio-tidak">Maaf, Gak Dapet :&lpar; </label>
+                                        </div>
+                                    </div>
+            
+                                </div>
+
+                                <!-- Location -->
+                                <div class="lokasi-temu w-full h-full hidden">
+                                    <label class="text-sm text-[#244CA5] font-montserrat font-medium sm:text-base" for="lokasi-barang"> Lokasi Ditemukan</label>
+            
+                                    <input class="w-full p-2 border border-[#88C6F8] rounded-xl shadow-md sm:mt-3" type="text" id="lokasi-barang" rows="5">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- Tombol Upload -->
+                    <div class="mt-5 text-center bg-[#8D72E1] rounded-xl shadow-xl">
+                        <button class="py-3 text-white font-montserrat font-semibold ">Unggah Laporan</button>
+                    </div>
+
+                    <!-- Radio Hilang / Temu -->
+                    <div class="scale-0">
+
+                        <!-- Hilang -->
+                        <input type="radio" id="barang-hilang" name="hilang-ketemu" value="barang-hilang" checked>
+                        <label for="barang-hilang"> Barang Hilang </label>
+
+                        <!-- Temu -->
+                        <input type="radio" id="barang-temu" name="hilang-ketemu" value="barang-temu">
+                        <label for="barang-temu"> Barang Temu </label>
+
+                    </div>
+
+                </form>
+            </div>
+        </section>
+        <!-- Form Barang Hilang & Ketemu End -->
+
+
+        <!-- Form Barang Hilang & Ketemu (Desktop) -->
+
+        <!-- Form Barang Hilang & Ketemu End -->
+
+
+        <script>
+
+            // Code Viewport
+            const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+            const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+            if(viewportWidth >= 1024){
+
+                // Change Form
+                const swithcer = document.querySelector(".switcher")
+                const switch_hilang = document.querySelector(".switch-hilang")
+                const switch_temu = document.querySelector(".switch-temu")
+
+                switch_temu.addEventListener("click", () => {
+                    swithcer.classList.add("translate-x-full")
+
+                    switch_temu.classList.toggle("text-[#BDC1C2]")
+                    switch_temu.classList.toggle("text-white")
+                    switch_hilang.classList.toggle("text-[#BDC1C2]")
+                    switch_hilang.classList.toggle("text-white")
+
+                    switch_hilang.classList.toggle("pointer-events-none")
+                    switch_temu.classList.toggle("pointer-events-none")
+                })
+
+                switch_hilang.addEventListener("click", () => {
+                    swithcer.classList.remove("translate-x-full")
+
+                    switch_temu.classList.toggle("text-[#BDC1C2]")
+                    switch_temu.classList.toggle("text-white")
+
+                    switch_hilang.classList.toggle("text-[#BDC1C2]")
+                    switch_hilang.classList.toggle("text-white")
+
+                    switch_hilang.classList.toggle("pointer-events-none")
+                    switch_temu.classList.toggle("pointer-events-none")
+                })
+
+
+            } else if(viewportWidth < 1024){
+
+                // Logic Show Image
+                let image = document.getElementById('gambar-input');
+                const img_placeholder = document.getElementById('img-placeholder')
+    
+                const loadFile = function(event) {
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                    img_placeholder.classList.add("hidden")
+                };
+    
+                // Logic Change form (Phone-Tablet)
+                const form_hilang_temu = document.getElementById("form-hilang-temu")
+                const judul_temu = document.querySelector(".judul-temu");
+                const judul_hilang = document.querySelector(".judul-hilang");
+                const rewards = document.querySelector(".rewards-hilang");
+                const lokasi = document.querySelector(".lokasi-temu");
+                const radio_hilang = document.getElementById("barang-hilang");
+                const radio_temu = document.getElementById("barang-temu");
+    
+                const nav_temu = document.querySelector(".nav-temu");
+                const nav_hilang = document.querySelector(".nav-hilang");
+                const slide_span = document.querySelector(".slide-span");
+    
+                nav_temu.addEventListener("click", () => {
+                    scrollTop()
+    
+                    slide_span.classList.remove("translate-x-full")
+    
+                    nav_temu.classList.remove("text-[#BDC1C2]")
+                    nav_temu.classList.add("text-[#8D9EFF]")
+    
+                    nav_hilang.classList.remove("text-[#8D9EFF]")
+                    nav_hilang.classList.add("text-[#BDC1C2]")
+    
+                    changeFormAnimation()
+    
+                    nav_temu.classList.add("pointer-events-none")
+                    nav_hilang.classList.remove("pointer-events-none")
+    
+                    radio_hilang.checked = false
+                    radio_temu.checked = true
+    
+                    console.log(`Radio Hilang : ${radio_hilang.checked}`)
+                    console.log(`Radio Temu : ${radio_temu.checked}`)
+                })
+    
+                nav_hilang.addEventListener("click", () => {
+                    scrollTop()
+    
+                    slide_span.classList.add("translate-x-full")
+    
+                    nav_hilang.classList.remove("text-[#BDC1C2]")
+                    nav_hilang.classList.add("text-[#8D9EFF]")
+    
+                    nav_temu.classList.remove("text-[#8D9EFF]")
+                    nav_temu.classList.add("text-[#BDC1C2]")
+    
+                    changeFormAnimation()
+    
+                    nav_hilang.classList.add("pointer-events-none")
+                    nav_temu.classList.remove("pointer-events-none")
+    
+                    radio_hilang.checked = true
+                    radio_temu.checked = false
+    
+                    console.log(`Radio Hilang : ${radio_hilang.checked}`)
+                    console.log(`Radio Temu : ${radio_temu.checked}`)
+                })
+    
+                function changeFormAnimation(){
+                    form_hilang_temu.classList.add("translate-y-full")
+    
+                    setTimeout(() => {  
+                        form_hilang_temu.classList.remove("translate-y-full")
+    
+                        changeFormInput()
+                    }, 700);
+            
+                }
+    
+                function changeFormInput(){
+                    judul_hilang.classList.toggle("hidden")
+                    judul_temu.classList.toggle("hidden")
+                    rewards.classList.toggle("hidden")
+                    lokasi.classList.toggle("hidden")
+                }
+    
+                function scrollTop(){
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                }
+            }
+
+        </script>
+
+    </body>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 </html>
