@@ -17,7 +17,7 @@
     <body class="bg-gray-200">
 
         <!-- Desktop Navigation Bar -->
-        <header class="w-full fixed bg-white shadow-kategori hidden lg:block z-10">
+        <header class="w-full fixed bg-white shadow-kategori hidden lg:block z-10 overflow-x-auto">
             <div class="container flex justify-between w-full ">
 
                 <!-- Logo (Kiri) -->
@@ -96,11 +96,11 @@
                     <div class="flex w-full mb-1">
 
                         <!-- Judul Temuan -->
-                        <div class="nav-temu w-1/2 text-[#BDC1C2]">
+                        <div class="nav-temu w-1/2 text-[#BDC1C2] cursor-pointer">
                             <h2 class="py-1 text-base text-center font-montserrat font-semibold tracking-wide">Barang Temuan</h2>
                         </div>
 
-                        <div class="nav-hilang w-1/2 text-[#8D9EFF] pointer-events-none">
+                        <div class="nav-hilang w-1/2 text-[#8D9EFF] pointer-events-none cursor-pointer">
                             <h2 class="py-1 text-base text-center font-montserrat font-semibold tracking-wide">Barang Hilang</h2>
                         </div>
 
@@ -117,7 +117,7 @@
         </header>
 
 
-        <!-- Upload Laporan Opening Section  -->
+        <!-- Upload Laporan Opening Section (Desktop)  -->
         <section class="pt-36 hidden lg:block">
             <div class="container">
                 <div class="w-full h-[45vh] mx-auto rounded-[40px] bg-no-repeat bg-left-bottom bg-cover relative" style="background-image: url(../src/img/bgAllitem.png);">
@@ -138,12 +138,12 @@
                         <div class="flex items-center w-full h-full text-center relative z-[1]">
 
                             <!-- Hilang -->
-                            <div class="switch-hilang w-1/2 text-white relative z-[3] transition-all duration-75 ease-in pointer-events-none">
+                            <div class="switch-hilang w-1/2 text-white relative z-[3] transition-all duration-75 ease-in pointer-events-none cursor-pointer">
                                 <p class="text-base  font-montserratAlt font-bold"> Barang Hilang </p>
                             </div>
 
                             <!-- Temu -->
-                            <div class="switch-temu w-1/2 text-[#BDC1C2] relative z-[3] transition-all duration-75 ease-in">
+                            <div class="switch-temu w-1/2 text-[#BDC1C2] relative z-[3] transition-all duration-75 ease-in cursor-pointer">
                                 <p class="text-base font-montserratAlt font-bold"> Barang Temuan </p>
                             </div>
 
@@ -205,16 +205,16 @@
                             <div class="w-[40%]">
 
                                 <!-- Image Show -->
-                                <div class="w-full mb-2 h-[120px] bg-white rounded-lg shadow-input-gambar relative">
+                                <div class="w-full mb-2 h-[120px] bg-white rounded-lg shadow-input-gambar relative md:h-[180px]">
 
-                                    <label id="img-placeholder" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" for="upload-foto">
+                                    <label id="logo-placeholder-mobile" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" for="input-gambar-mobile">
                                         <svg class="w-12 h-12 text-[#6C4AB6]"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="13" r="3" />  <path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h2m9 7v7a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />  <line x1="15" y1="6" x2="21" y2="6" />  <line x1="18" y1="3" x2="18" y2="9" /></svg>
                                     </label>
 
-                                    <img id="gambar-input" class="w-full h-full rounded-lg">
+                                    <img id="target-image-mobile" class="w-full h-full rounded-lg" >
                                 </div>
 
-                                <input class="w-full font-montserrat font-medium" type="file" name="upload-foto" id="upload-foto"  onchange="loadFile(event)" required> 
+                                <input id="input-gambar-mobile" class="w-full font-montserrat font-medium" type="file" required> 
 
                             </div>
 
@@ -279,146 +279,100 @@
 
 
         <!-- Form Barang Hilang & Ketemu (Desktop) -->
+        <section id="form-hilang-temu-desktop" class="pt-24 hidden lg:block transition-all ease-in-out duration-700">
+            <div class="container">
 
+                <!-- Container Form -->
+                <div class="w-full p-5 bg-white rounded-3xl shadow-form-desktop xl:p-7">
+
+                    <!-- Judul Form -->
+                    <h1 id="judul-form-desktop" class="text-2xl font-poppins font-semibold xl:text-3xl"> Laporan Barang Hilang </h1>
+
+                    <!-- The Real Form -->
+                    <form class="flex w-full mt-4 xl:mt-5">
+
+                        <!-- Form Kiri -->
+                        <div class="w-1/2">
+
+                            <!-- Nama Barang -->
+                            <div class="w-full mb-5">
+                                <label class="mb-2 inline-block text-base text-[#244CA5] font-montserrat font-medium xl:text-lg" for="nama-desktop"> Nama Barang </label>
+
+                                <input class="w-full p-3 border border-[#88C6F8] rounded-xl" type="text" id="nama-desktop">
+                            </div>
+                            
+                            <!-- Deskripsi Barang  -->
+                            <div class="w-full mb-5">
+                                <label class="mb-2 inline-block text-base text-[#244CA5] font-montserrat font-medium xl:text-lg" for="deskripsi-desktop"> Deskripsi Barang </label>
+
+                                <textarea class="w-full p-3 border border-[#88C6F8] rounded-xl" type="text" id="deskripsi-desktop" rows="5"></textarea>
+                            </div>
+
+                            <!-- Kronologi -->
+                            <div class="w-full">
+                                <label class="mb-2 inline-block text-base text-[#244CA5] font-montserrat font-medium xl:text-lg" for="kornologi-desktop"> Kronologi Kehilangan </label>
+
+                                <textarea class="w-full p-3 border border-[#88C6F8] rounded-xl" type="text" id="kornologi-desktop" rows="5"></textarea>
+                            </div>
+
+                        </div>
+
+                        <!-- Form Kanan -->
+                        <div class="w-1/2 px-5 pt-8">
+
+                            <!-- Image Show -->
+                            <div class="w-full mb-4 h-[250px] bg-white rounded-lg shadow-input-gambar relative xl:h-[300px]">
+
+                                <label id="logo-placeholder-desktop" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" for="input-gambar-desktop">
+                                    <svg class="w-12 h-12 text-[#6C4AB6]"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="13" r="3" />  <path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h2m9 7v7a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />  <line x1="15" y1="6" x2="21" y2="6" />  <line x1="18" y1="3" x2="18" y2="9" /></svg>
+                                </label>
+
+                                <img id="target-image-desktop" class="w-full h-full rounded-lg" >
+                            </div>
+
+                            <!-- Container Tag Input -->
+                            <div class="flex w-full mb-5">
+                                <input id="input-gambar-desktop" class="w-[60%] m-auto font-montserrat font-medium" type="file" required> 
+                            </div>
+
+                            <!-- Reward -->
+                            <div class="rewards-hilang w-full">
+                    
+                                <p class="mb-3 text-base text-[#244CA5] font-montserrat font-medium xl:text-lg"> Apakah kamu ingin memberi rewards ? </p>
+        
+                                <div class="flex gap-4 w-full mt-3">
+                                    <div class="flex items-center gap-3 w-1/2 px-2 py-[5px] border border-[#244CA5] rounded-lg lg:px-4 xl:w-[40%] xl:px-5">
+                                        <input class="" type="radio" id="" name="" value="">
+                                        <label id="" class="text-sm font-montserrat font-medium rounded-lg" for="">Yup, Dapet Nih !</label>
+                                    </div>
+            
+                                    <div class="flex items-center gap-3 w-1/2 px-2 py-[5px] border border-[#244CA5] rounded-lg lg:px-4 xl:w-[40%] xl:px-5">
+                                        <input class="" type="radio" id="" name="" value="">
+                                        <label id="" class="text-sm font-montserrat font-medium" for="">Maaf, Gak Dapet :&lpar; </label>
+                                    </div>
+                                </div>
+        
+                            </div>
+
+                            <!-- Location -->
+                            <div class="lokasi-temu w-full h-full hidden">
+                                <label class="mb-2 inline-block text-base text-[#244CA5] font-montserrat font-medium xl:text-lg" for=""> Lokasi Ditemukan</label>
+        
+                                <input class="w-full p-2 border border-[#88C6F8] rounded-xl shadow-md" type="text" id="" rows="5">
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
         <!-- Form Barang Hilang & Ketemu End -->
 
 
-        <script>
-
-            // Code Viewport
-            const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-            const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-
-            if(viewportWidth >= 1024){
-
-                // Change Form
-                const swithcer = document.querySelector(".switcher")
-                const switch_hilang = document.querySelector(".switch-hilang")
-                const switch_temu = document.querySelector(".switch-temu")
-
-                switch_temu.addEventListener("click", () => {
-                    swithcer.classList.add("translate-x-full")
-
-                    switch_temu.classList.toggle("text-[#BDC1C2]")
-                    switch_temu.classList.toggle("text-white")
-                    switch_hilang.classList.toggle("text-[#BDC1C2]")
-                    switch_hilang.classList.toggle("text-white")
-
-                    switch_hilang.classList.toggle("pointer-events-none")
-                    switch_temu.classList.toggle("pointer-events-none")
-                })
-
-                switch_hilang.addEventListener("click", () => {
-                    swithcer.classList.remove("translate-x-full")
-
-                    switch_temu.classList.toggle("text-[#BDC1C2]")
-                    switch_temu.classList.toggle("text-white")
-
-                    switch_hilang.classList.toggle("text-[#BDC1C2]")
-                    switch_hilang.classList.toggle("text-white")
-
-                    switch_hilang.classList.toggle("pointer-events-none")
-                    switch_temu.classList.toggle("pointer-events-none")
-                })
-
-
-            } else if(viewportWidth < 1024){
-
-                // Logic Show Image
-                let image = document.getElementById('gambar-input');
-                const img_placeholder = document.getElementById('img-placeholder')
-    
-                const loadFile = function(event) {
-                    image.src = URL.createObjectURL(event.target.files[0]);
-                    img_placeholder.classList.add("hidden")
-                };
-    
-                // Logic Change form (Phone-Tablet)
-                const form_hilang_temu = document.getElementById("form-hilang-temu")
-                const judul_temu = document.querySelector(".judul-temu");
-                const judul_hilang = document.querySelector(".judul-hilang");
-                const rewards = document.querySelector(".rewards-hilang");
-                const lokasi = document.querySelector(".lokasi-temu");
-                const radio_hilang = document.getElementById("barang-hilang");
-                const radio_temu = document.getElementById("barang-temu");
-    
-                const nav_temu = document.querySelector(".nav-temu");
-                const nav_hilang = document.querySelector(".nav-hilang");
-                const slide_span = document.querySelector(".slide-span");
-    
-                nav_temu.addEventListener("click", () => {
-                    scrollTop()
-    
-                    slide_span.classList.remove("translate-x-full")
-    
-                    nav_temu.classList.remove("text-[#BDC1C2]")
-                    nav_temu.classList.add("text-[#8D9EFF]")
-    
-                    nav_hilang.classList.remove("text-[#8D9EFF]")
-                    nav_hilang.classList.add("text-[#BDC1C2]")
-    
-                    changeFormAnimation()
-    
-                    nav_temu.classList.add("pointer-events-none")
-                    nav_hilang.classList.remove("pointer-events-none")
-    
-                    radio_hilang.checked = false
-                    radio_temu.checked = true
-    
-                    console.log(`Radio Hilang : ${radio_hilang.checked}`)
-                    console.log(`Radio Temu : ${radio_temu.checked}`)
-                })
-    
-                nav_hilang.addEventListener("click", () => {
-                    scrollTop()
-    
-                    slide_span.classList.add("translate-x-full")
-    
-                    nav_hilang.classList.remove("text-[#BDC1C2]")
-                    nav_hilang.classList.add("text-[#8D9EFF]")
-    
-                    nav_temu.classList.remove("text-[#8D9EFF]")
-                    nav_temu.classList.add("text-[#BDC1C2]")
-    
-                    changeFormAnimation()
-    
-                    nav_hilang.classList.add("pointer-events-none")
-                    nav_temu.classList.remove("pointer-events-none")
-    
-                    radio_hilang.checked = true
-                    radio_temu.checked = false
-    
-                    console.log(`Radio Hilang : ${radio_hilang.checked}`)
-                    console.log(`Radio Temu : ${radio_temu.checked}`)
-                })
-    
-                function changeFormAnimation(){
-                    form_hilang_temu.classList.add("translate-y-full")
-    
-                    setTimeout(() => {  
-                        form_hilang_temu.classList.remove("translate-y-full")
-    
-                        changeFormInput()
-                    }, 700);
-            
-                }
-    
-                function changeFormInput(){
-                    judul_hilang.classList.toggle("hidden")
-                    judul_temu.classList.toggle("hidden")
-                    rewards.classList.toggle("hidden")
-                    lokasi.classList.toggle("hidden")
-                }
-    
-                function scrollTop(){
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-                }
-            }
-
-        </script>
+        <script src="uploadBarang.js"></script>
 
     </body>
 
