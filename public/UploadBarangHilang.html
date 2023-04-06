@@ -117,14 +117,15 @@
         </header>
 
 
-        <!-- Upload Laporan Opening Section (Desktop)  -->
+        <!-- Upload Laporan Opening Section (Desktop) -->
         <section class="pt-36 hidden lg:block">
             <div class="container">
+
                 <div class="w-full h-[45vh] mx-auto rounded-[40px] bg-no-repeat bg-left-bottom bg-cover relative" style="background-image: url(../src/img/bgAllitem.png);">
 
                     <!-- All Item Opening -->
                     <div class="flex flex-col justify-center items-center w-full h-full">
-                
+
                         <!-- Tagline -->
                         <p class="mb-5 text-5xl text-white font-jost font-semibold"> Kehilangan Atau Menemukan Barang ? </p>
                         <p class="text-5xl text-white font-jost font-semibold"> Coba Buat Laporan Mu Di Sini ! </p>
@@ -148,9 +149,7 @@
                             </div>
 
                             <!-- Switcher -->
-                            <div class="switcher w-[50%] h-[55px] bg-[#8D9EFF] text-center rounded-2xl absolute transition-all ease-in-out duration-300 z-[2]">
-
-                            </div>
+                            <div class="switcher w-[50%] h-[55px] bg-[#8D9EFF] text-center rounded-2xl absolute transition-all ease-in-out duration-700 z-[2]"></div>
 
                         </div>
 
@@ -286,7 +285,8 @@
                 <div class="w-full p-5 bg-white rounded-3xl shadow-form-desktop xl:p-7">
 
                     <!-- Judul Form -->
-                    <h1 id="judul-form-desktop" class="text-2xl font-poppins font-semibold xl:text-3xl"> Laporan Barang Hilang </h1>
+                    <h1 id="judul-hilang-desktop" class="text-2xl font-poppins font-semibold xl:text-3xl"> Laporan Barang Hilang </h1>
+                    <h1 id="judul-temu-desktop" class="text-2xl font-poppins font-semibold xl:text-3xl hidden"> Laporan Barang Temuan </h1>
 
                     <!-- The Real Form -->
                     <form class="flex w-full mt-4 xl:mt-5">
@@ -336,29 +336,42 @@
                             </div>
 
                             <!-- Reward -->
-                            <div class="rewards-hilang w-full">
+                            <div id="reward-hilang-desktop" class="w-full">
                     
                                 <p class="mb-3 text-base text-[#244CA5] font-montserrat font-medium xl:text-lg"> Apakah kamu ingin memberi rewards ? </p>
         
                                 <div class="flex gap-4 w-full mt-3">
                                     <div class="flex items-center gap-3 w-1/2 px-2 py-[5px] border border-[#244CA5] rounded-lg lg:px-4 xl:w-[40%] xl:px-5">
-                                        <input class="" type="radio" id="" name="" value="">
-                                        <label id="" class="text-sm font-montserrat font-medium rounded-lg" for="">Yup, Dapet Nih !</label>
+                                        <input type="radio" id="radio-yes-desktop" name="rewards-yes-no-desktop" value="yes">
+                                        <label id="label-yes-desktop" class="text-sm font-montserrat font-medium rounded-lg" for="radio-yes-desktop">Yup, Dapet Nih !</label>
                                     </div>
             
                                     <div class="flex items-center gap-3 w-1/2 px-2 py-[5px] border border-[#244CA5] rounded-lg lg:px-4 xl:w-[40%] xl:px-5">
-                                        <input class="" type="radio" id="" name="" value="">
-                                        <label id="" class="text-sm font-montserrat font-medium" for="">Maaf, Gak Dapet :&lpar; </label>
+                                        <input type="radio" id="radio-no-desktop" name="rewards-yes-no-desktop" value="no">
+                                        <label id="label-no-desktop" class="text-sm font-montserrat font-medium" for="radio-no-desktop">Maaf, Gak Dapet :&lpar; </label>
                                     </div>
                                 </div>
         
                             </div>
 
                             <!-- Location -->
-                            <div class="lokasi-temu w-full h-full hidden">
-                                <label class="mb-2 inline-block text-base text-[#244CA5] font-montserrat font-medium xl:text-lg" for=""> Lokasi Ditemukan</label>
+                            <div id="lokasi-temu-desktop" class="w-full h-full hidden">
+                                <label class="mb-2 inline-block text-base text-[#244CA5] font-montserrat font-medium xl:text-lg" for="lokasi-desktop"> Lokasi Ditemukan</label>
         
-                                <input class="w-full p-2 border border-[#88C6F8] rounded-xl shadow-md" type="text" id="" rows="5">
+                                <input class="w-full p-2 border border-[#88C6F8] rounded-xl shadow-md" type="text" id="lokasi-desktop" rows="5">
+                            </div>
+
+                            <!-- Radio Hilang / Temu -->
+                            <div class="scale-0">
+
+                                <!-- Hilang -->
+                                <input type="radio" id="barang-hilang-desktop" name="hilang-ketemu-desktop" value="barang-hilang-desktop" checked>
+                                <label for="barang-hilang-desktop"> Barang Hilang </label>
+
+                                <!-- Temu -->
+                                <input type="radio" id="barang-temu-desktop" name="hilang-ketemu-desktop" value="barang-temu-desktop">
+                                <label for="barang-temu-desktop"> Barang Temu </label>
+
                             </div>
 
                         </div>
@@ -372,10 +385,104 @@
         <!-- Form Barang Hilang & Ketemu End -->
 
 
+        <!-- Aside Section -->
+        <section class="w-[90%] h-[60vh] mx-auto mt-48 mb-10 hidden lg:block relative">
+
+            <!-- Container Cari Sekarang -->
+            <div class="flex justify-around w-[70%] py-10 bg-gradient-to-r from-[#4870C0] to-[#a7b3fa] rounded-3xl absolute -top-7 left-1/2 -translate-x-1/2 -translate-y-1/2">
+
+                <!-- Headline -->
+                <div class="text-3xl text-white font-jost font-semibold">
+                    <p> Kamu Kehilangan Barang ? </p>
+
+                    <p> Coba Cari Di Foundit. </p>
+                </div>
+
+                <!-- Button -->
+                <div class="self-center">
+                    <button class="px-10 py-4 text-lg text-white bg-[#395EB4] rounded-[52px]"> Cari Sekarang! </button>
+                </div>
+
+            </div>
+            
+
+            <div class="container h-full bg-[#EEEEEE] rounded-3xl shadow-kategori">
+                <div class="flex flex-wrap justify-center items-center h-full">
+
+                    <!-- Kiri -->
+                    <div class="w-[40%]">
+
+                        <!-- Logo -->
+                        <div class="w-[30%] mb-3">
+                            <img class="w-full" src="../src/img/logoLain.png" alt="Logo Foundit">
+                        </div>
+
+                        <!-- Text Aside -->
+                        <p class="mb-3 text-base text-justify font-openSans font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi accusamus iusto, quod distinctio cum officia omnis at exercitationem ut sunt.</p>
+
+                        <!-- Media Sosial -->
+                        <div class="flex gap-4 w-full">
+
+                            <!-- Instagram -->
+                            <span class="p-[6px] bg-[#231656] rounded-full">
+                                <svg class="w-4 h-4 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="16" height="16" rx="4" />  <circle cx="12" cy="12" r="3" />  <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" /></svg>
+                            </span>
+
+                            <!-- Facebook -->
+                            <span class="p-[6px] bg-[#231656] rounded-full">
+                                <svg class="w-4 h-4 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+                            </span>
+
+                            <!-- Twitter -->
+                            <span class="p-[6px] bg-[#231656] rounded-full">
+                                <svg class="w-4 h-4 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" /></svg>
+                            </span>
+
+                            <!-- Youtube -->
+                            <span class="p-[6px] bg-[#231656] rounded-full">
+                                <svg class="w-4 h-4 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" /></svg>
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Garis tengah -->
+                    <span class="w-[1px] h-[65%] mx-5 bg-[#17282F] block"></span>
+
+                    <!-- Kanan -->
+                    <div class="w-[40%]">
+
+                        <!-- Menu Navigasi -->
+                        <div class="w-full">
+
+                            <!-- Judul Menu -->
+                            <p class="mb-3 text-2xl text-[#3D3269] font-montserrat font-semibold"> Menu </p>
+
+                            <!-- Navigasi -->
+                            <div class="flex justify-between w-full text-base text-[#244CA5] font-medium">
+                                <a href="#"> About us </a>
+                                <a href="#"> Laporan </a>
+                                <a href="#"> Chatting </a>
+                                <a href="#"> Settings </a>
+                            </div>
+
+                            <!-- Garis -->
+                            <span class="w-full h-[1px] my-10 bg-[#17282F] block"></span>
+
+                            <p class="text-sm text-[#8D72E1] text-center font-poppins font-medium"> © 2022 Foundit. All rights reserved. </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- Aside Section End -->
+
         <script src="uploadBarang.js"></script>
 
     </body>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 </html>

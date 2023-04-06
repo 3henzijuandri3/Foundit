@@ -134,7 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const switch_temu = document.querySelector(".switch-temu")
 
         const form_desktop = document.getElementById("form-hilang-temu-desktop")
-        const judul_form_desktop = document.getElementById("judul-form-desktop")
+        const judul_hilang_desktop = document.getElementById("judul-hilang-desktop")
+        const judul_temu_desktop = document.getElementById("judul-temu-desktop")
+
+        const reward_desktop = document.getElementById("reward-hilang-desktop")
+        const lokasi_desktop = document.getElementById("lokasi-temu-desktop")
+
+        const radio_hilang_desktop = document.getElementById("barang-hilang-desktop");
+        const radio_temu_desktop = document.getElementById("barang-temu-desktop");
         
         switch_temu.addEventListener("click", () => {
             swithcer.classList.add("translate-x-full")
@@ -146,8 +153,14 @@ document.addEventListener("DOMContentLoaded", () => {
         
             switch_hilang.classList.toggle("pointer-events-none")
             switch_temu.classList.toggle("pointer-events-none")
+
+            radio_hilang_desktop.checked = false
+            radio_temu_desktop.checked = true
     
-            changeDesktopFormAnimation_Kanan()
+            changeDesktopFormAnimation()
+
+            console.log(`Radio Hilang : ${radio_hilang_desktop.checked}`)
+            console.log(`Radio Temu : ${radio_temu_desktop.checked}`)
         })
         
         switch_hilang.addEventListener("click", () => {
@@ -161,25 +174,33 @@ document.addEventListener("DOMContentLoaded", () => {
             
             switch_hilang.classList.toggle("pointer-events-none")
             switch_temu.classList.toggle("pointer-events-none")
+
+            radio_hilang_desktop.checked = true
+            radio_temu_desktop.checked = false
         
-            changeDesktopFormAnimation_Kiri()
+            changeDesktopFormAnimation()
+
+            console.log(`Radio Hilang : ${radio_hilang_desktop.checked}`)
+            console.log(`Radio Temu : ${radio_temu_desktop.checked}`)
         })
 
-        function changeDesktopFormAnimation_Kanan(){
-    
-            setTimeout(() => {  
+        function changeDesktopFormAnimation(){
+            
+            form_desktop.classList.add("scale-0")
 
+            setTimeout(() => {  
+                form_desktop.classList.remove("scale-0")
+
+                changeFormInputDesktop()
             }, 700);
     
         }
 
-        function changeDesktopFormAnimation_Kiri(){
-
-    
-            setTimeout(() => {  
-
-            }, 700);
-    
+        function changeFormInputDesktop(){
+            judul_hilang_desktop.classList.toggle("hidden")
+            judul_temu_desktop.classList.toggle("hidden")
+            reward_desktop.classList.toggle("hidden")
+            lokasi_desktop.classList.toggle("hidden")
         }
 
     }
