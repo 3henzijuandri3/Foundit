@@ -35,6 +35,7 @@ module.exports = {
         'kategori' : "6px 7px 7px -1px rgba(0, 0, 0, 0.25)",
         'barang' : '8px 9px 6px -1px rgba(0, 0, 0, 0.25)',
         'input-gambar' : '3px 1px 6px rgba(0, 0, 0, 0.25)',
+        'switch-post' : 'inset 0px 0px 4px 2px rgba(0, 0, 0, 0.25)',
       }
     },
   },
