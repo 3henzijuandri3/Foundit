@@ -824,6 +824,10 @@ video {
   margin-top: 20rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1765,6 +1769,10 @@ video {
   line-height: 1rem;
 }
 
+.text-\[13px\] {
+  font-size: 13px;
+}
+
 .font-\[500\] {
   font-weight: 500;
 }
@@ -2690,6 +2698,11 @@ video {
     padding-bottom: 1.25rem;
   }
 
+  .xl\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .xl\:pt-20 {
     padding-top: 5rem;
   }
@@ -2717,6 +2730,10 @@ video {
   .xl\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .xl\:text-\[13px\] {
+    font-size: 13px;
   }
 }
 
