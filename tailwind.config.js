@@ -37,6 +37,9 @@ module.exports = {
         'input-gambar' : '3px 1px 6px rgba(0, 0, 0, 0.25)',
         'switch-post' : 'inset 0px 0px 4px 2px rgba(0, 0, 0, 0.25)',
         'history' : '3px 4px 4px rgba(0, 0, 0, 0.25)',
+        'btn' : '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        'claim' : '6px 8px 4px rgba(0, 0, 0, 0.25)',
+        'dropdown' : '0px 4px 7px rgba(0, 0, 0, 0.25)',
       }
     },
   },
